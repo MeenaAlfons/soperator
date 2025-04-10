@@ -57,7 +57,7 @@ func TestTerraform(t *testing.T) {
 	terraform.WorkspaceSelectOrNew(t, &commonOptions, "e2e-test")
 	terraform.Destroy(t, &commonOptions)
 
-	defer terraform.Destroy(t, &commonOptions)
+	// defer terraform.Destroy(t, &commonOptions)
 
 	terraform.Apply(t, &commonOptions)
 }
